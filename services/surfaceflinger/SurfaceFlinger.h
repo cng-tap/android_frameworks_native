@@ -141,6 +141,9 @@ public:
         return *mRenderEngine;
     }
 
+    void screenReleased(const sp<IBinder>& display);
+    void screenAcquired(const sp<IBinder>& display);
+
 private:
     friend class Client;
     friend class DisplayEventConnection;
