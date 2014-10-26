@@ -42,6 +42,9 @@ LOCAL_C_INCLUDES := \
     external/openssl/include \
 
 LOCAL_CFLAGS += -Wno-unused-parameter
+ifneq ($(TARGET_BUILD_VARIANT),user)
+	LOCAL_CFLAGS += -DCONSOLE_MANAGER -DANDROID_VT=7
+endif
 
 LOCAL_EXPORT_C_INCLUDE_DIRS := $(LOCAL_PATH)
 
