@@ -34,7 +34,6 @@
 #include "Transform.h"
 
 struct ANativeWindow;
-class ConsoleManagerThread;
 
 namespace android {
 
@@ -218,9 +217,6 @@ private:
     // Whether we have a visible secure layer on this display
     bool mSecureLayerVisible;
 
-#ifdef CONSOLE_MANAGER
-    sp<ConsoleManagerThread> mConsoleManagerThread;
-#endif
 
     /*
      * Transaction state
